@@ -171,7 +171,7 @@ def do_plot():
 
     Returns
     -------
-    Generates a .tiff figure in the current directory (filename specified in
+    Generates a .png figure in the current directory (filename specified in
     the variable FNAME_PLOT) corresponding to the plot showing the evolution in
     the number of renal MRI articles
 
@@ -203,7 +203,7 @@ def do_plot():
         plt.plot(c_years, np.cumsum(c_n_ids),
                  linestyle=next(style), label=c_label)
 
-    # Customise appearance and save as .tiff file
+    # Customise appearance and save as .png file
     sns.despine()
     axes = plt.gca()
     axes.set_xlim([15.0, 31])
