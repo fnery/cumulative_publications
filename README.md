@@ -4,9 +4,7 @@ Python project containing code which searches PubMed (using the [Bio.Entrez pack
 
 Data are retrieved by multiple PubMed searches using queries with format: `(kidney* OR renal) AND <TECHNIQUE> AND MRI AND <year> [PDAT]`, where `<TECHNIQUE>` is one of the following substrings: (diffusion-weighted imaging OR diffusion tensor imaging OR intravoxel incoherent motion), arterial spin label*, blood oxygenation-level dependent and (T1 mapping OR T2 mapping), respectively, for the techniques: diffusion imaging, arterial spin labelling, BOLD and T1&T2 mapping and `<year>` varied from 1989 to 2020 (only the last ~15 years shown). Duplicates were removed.
 
-
-
-An updated plot (as of Jan 2020 is below):
+An updated plot (as of July 2020 is below):
 
 <img src="cumulative_publications.png" width="500">
 
