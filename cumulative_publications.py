@@ -68,6 +68,7 @@ PLOT_LABELS = ['Diffusion imaging',
                'Arterial spin labeling',
                'BOLD',
                'T1&T2 mapping']
+FONT_SIZE = 15
 
 
 def do_searches():
@@ -207,11 +208,15 @@ def do_plot():
     sns.despine()
     axes = plt.gca()
     axes.set_xlim([15.0, 31])
-    plt.legend()
+    plt.legend(fontsize=FONT_SIZE)
     plt.xticks(rotation=70)
     plt.xlabel('Year')
     plt.ylabel('Cumulative publications')
     plt.tight_layout()
+    ax=plt.gca()
+    for item in ([ax.title, ax.xaxis.label, ax.yaxis.label] +
+                 ax.get_xticklabels() + ax.get_yticklabels()):
+        item.set_fontsize(FONT_SIZE)
     plt.savefig(FNAME_PLOT, format="png", dpi=300)
 
 
